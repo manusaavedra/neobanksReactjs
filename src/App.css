@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+:root {
+  --primaryColor: rgba(45, 20, 196, 1);
+  --secondaryColor: rgba(105, 121, 248, 1);
+  --gray: #909090;
+  --lightGray: #e6e6e6;
+  --black: #000;
+  --white: #fff;
+  --lightGray2: #fafafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding-inline: 33px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttonOutline {
+  background-color: white;
+  border: 1px solid var(--lightGray);
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.text-success {
+  color: green
+}
+
+.numberIndicator {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--secondaryColor)
+}
+
+.text-muted {
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+.dashboard .title {
+  display: flex;
+  align-items: center;
+  background-color: var(--lightGray2);
+  height: 56px;
+  padding-inline: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--lightGray);
+  padding: 15px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.rightContainer .card {
+  width: 100%;
+  align-items: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.leftContainer  {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.rightContainer {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media(max-width: 1100px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    min-width: 100px !important;
+    padding: 15px 15px;
+    font-size: 12px;
   }
 }
